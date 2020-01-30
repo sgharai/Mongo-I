@@ -98,7 +98,7 @@ server.delete('/posts/:id', (req, res) => {
 // TODO: write your server code here
 
 mongoose.Promise = global.Promise;
-const connect = mongoose.connect('mongodb://localhost:1111/collies', {
+const connect = mongoose.connect('mongodb://localhost:27017/collies', {
   useMongoClient: true
 });
 
@@ -114,3 +114,21 @@ connect.then(
     console.log('************************\n');
   }
 );
+
+  
+// const express = require('express');
+// const helmet = require('helmet');
+// const cors = require('cors');
+
+// const server = express();
+
+// server.use(helmet());
+// server.use(cors());
+// server.use(express.json());
+
+// server.get('/', (req, res) => {
+//   res.status(200).json({ api: 'running' });
+// });
+
+// const port = process.env.PORT || 5000;
+// server.listen(port, () => console.log(`\n=== API up on port: ${port} ===\n`));
